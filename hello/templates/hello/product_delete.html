@@ -1,0 +1,12 @@
+{% extends 'template.html' %}
+{% block content %}
+<form action="" method="POST">
+	{% csrf_token %}
+<p>
+	Are you sure want to delete this product?
+
+</p>
+<input type="submit" value="Yes,Delete">
+</form>
+
+{% endblock %}

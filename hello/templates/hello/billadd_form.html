@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+		<style>
+			h1{
+				color: dodgerblue;;
+				text-align: center;
+				
+			}
+			form{
+				margin-left: 450px;
+				margin-top: 100px;
+				font-size: 25px;
+
+			}
+			.print{
+				color: gray;
+				background-color: rgb(70, 233, 29);
+				border-color: gray;
+			}
+		
+		</style>
+	</head>
+	<body>
+		{% extends 'template.html' %}
+	{% block content %}
+		<h1>Bill Generation</h1><hr>
+		<form action="" method="POST">
+	{% csrf_token %}
+		<table>
+	{{form.as_table}}
+		</table>
+		
+		<input type="submit" value="Print"  class="print" >
+	</form>
+
+	{% endblock %}
+		
+		<script src="" async defer></script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+
+<html>
+    <body>
+        <style>
+            h1{
+                color: dodgerblue;
+                text-align: center;
+            }
+            input{
+                margin-left: 280px;
+                font-size: large;
+                background-color: #a39c97;
+                border: 0px;
+                border-color: black;
+                border-radius: 7px;
+               
+                
+            }
+            ::placeholder{
+                color: aliceblue;
+                
+            }
+            img{
+                margin: 100px;
+                width: 700px;;
+            }
+           
+        </style>
+    
+{% extends 'template.html' %}
+{% block content %}
+<div><hr>
+        <h1>CUBIXCOLOR PHARMACY</h1><hr><br><br>
+        <form method="GET" action="{% url 'product-search' %}">
+            <input type="text" name="search" placeholder="Enter product name">
+            <button type="submit" style="background: rgb(70, 233, 29); border-radius: 7px; ">search</button><br><br>
+        </form>
+        {% load static %}
+        <img src="{% static 'images/imag1.jpg' %}"   alt="img">
+        
+       
+        <script src="" async defer></script>
+    </div>
+       
+{% endblock %}
+</body>
+</html>

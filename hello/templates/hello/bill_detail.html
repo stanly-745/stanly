@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+		<style>
+			body{
+			  margin-left: 400px;
+			}
+			h1{
+				color: dodgerblue;
+			}
+			table{
+				font-size: large;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="printablearea" >
+			<h1>Customer Name: {{bill.customer_name}}</h1>
+			<a href="{{bill.add_product}}"><button>Add product</button></a><br><br>
+			<table>
+				<br>
+				
+				<tr>
+					<th>Products</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+				{% for product in products %}
+				<tr>
+					<td>{{ product.billprod.product_name }}</td>
+					<td>{{ product.quantity }}</td>
+					<td>{{ product.billprod.product_price }}</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td>GST</td>
+					<td></td>
+					<td>2.0</td>
+			
+				</tr>
+				<tr>
+					<td>
+						<b>Total Amount</b>
+			
+					</td>
+					<td></td>
+					<td>
+						{{bill.total_sum}}
+					</td>
+				</tr>
+			</table>
+			</div><br>
+			
+			<input type="button" onclick="printDiv('printablearea')" value="print" />
+			
+			
+
+		<script src="" async defer></script>
+	</body>
+	<a href="{% url 'bill-add' %}"><button>New Bill</button> </a>
+</html>
+
+
+<script>
+    function printDiv(printablearea) {
+        var printContents=document.getElementById(printablearea).innerHTML;
+        var originalContents=document.body.innerHTML;
+        
+        document.body.innerHTML=printContents;
+
+        window.print();
+
+        document.body.innerHTML=originalContents;
+        }
+</script>
+

@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+{% block content %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            h1{
+                text-align: center;
+                color: dodgerblue;
+                font-size: 40px;
+            }
+            ol{
+                margin-left: 550px;
+                margin-top: 150px;
+                font-size: 30px;
+            }
+
+            a{
+                color: rgb(29, 233, 138);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Product List</h1><hr>
+        {% if product_list %}
+        <ol>
+            {% for product in product_list %}
+            <li><a href="{{product.get_absolute_url}}" >{{product.product_name}}</a>  </li>
+            {% endfor %}
+
+        </ol>
+        {% else %}
+        <p> product table is empty</p>
+        {% endif %}
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+{% endblock %}

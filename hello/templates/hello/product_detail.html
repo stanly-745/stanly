@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{% block content %}
+<h1> {{ product.product_name}}</h1>
+
+<p>category :{{product.product_category}}<br>
+    price : {{product.product_price}}
+
+</p>
+
+<a href="{{product.get_update_url}}" style="float:left;">Update</a><br><br>
+<a href="{{product.get_delete_url}}" style="float:left;" color="red;" >Delete</a><br><br>
+
+{% endblock %}
