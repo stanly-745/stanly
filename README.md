@@ -5,12 +5,12 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on medical billing software
+- 🔭 I’m currently working on medical billing software using Django
 - 🌱 I’m currently learning Django 
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
+- 👯 I’m looking to collaborate on *#*
+- 🤔 I’m looking for help with *#*
+- 💬 Ask me about *#*
 - 📫 How to reach me: stanlys745@gmail.com
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+- 😄 Pronouns: *#*
+- ⚡ Fun fact: *#*
 
